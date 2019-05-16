@@ -2,24 +2,81 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/TicTacToe/assets/logic.js"></script>
-</head>
+    <script src="assets\javascript\logic.js"></script>
+</head> 
 
 <body>
 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Tic Tac Toe</h1>
+            <p class="lead">Have you ever played a more exciting game?</p>
+        </div>
+    </div>
+
+
     <div class="container">
-        <div class="tictactoe">
-            <div id="a1" class="tictactoe"></div>
-            <div id="a2" class="tictactoe"></div>
-            <div id="a3" class="tictactoe"></div>
-            <div id="b1" class="tictactoe"></div>
-            <div id="b2" class="tictactoe"></div>
-            <div id="b3" class="tictactoe"></div>
-            <div id="c1" class="tictactoe"></div>
-            <div id="c2" class="tictactoe"></div>
-            <div id="c3" class="tictactoe"></div>
+        <div class="row">
+            <div class="col-0 col-sm-0 col-md-3 col-lg-3"></div>
+            <div class="buffer col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="a1">
+                            <div class="gamepiece">a1</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="a2">
+                                <div class="gamepiece">a2</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="a3">
+                                <div class="gamepiece">a3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="b1">
+                                <div class="gamepiece">b1</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="b2">
+                                <div class="gamepiece">b2</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="b3">
+                                <div class="gamepiece">b3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="c1">
+                                <div class="gamepiece">c1</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="c2">
+                                <div class="gamepiece">c2</div>
+                        </div>
+                    </div>
+                    <div class="tictactoe col col-sm-4 col-md-4 col-lg-4">
+                        <div id="c3">
+                                <div class="gamepiece">c3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-0 col-sm-0 col-md-3 col-lg-3"></div>
+            </div>
         </div>
     </div>
     <footer>

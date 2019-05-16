@@ -1,0 +1,32 @@
+/* styling borders to create game board */
+
+#a1, #a2, #b1, #b2 {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#a3, #b3 {
+    border-bottom: 1px solid black;
+}
+
+#c1, #c2 {
+    border-right: 1px solid black;
+}
+
+#a1, #a2, #b1, #b2, #a3, #b3, #c1, #c2, #c3 {
+    height:130px;
+    text-align: center;
+}
+
+.gamepiece {
+    position: relative;
+    top: 50px;
+}
+
+.tictactoe {
+    padding: 0px;
+}
+
+.buffer {
+    margin-top: 100px;
+}

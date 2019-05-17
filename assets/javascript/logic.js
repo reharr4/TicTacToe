@@ -1,6 +1,5 @@
-// $(document).ready(function () {
-//     for (i=0; i < 1; i++){
-//         var buttons = $("<button>Add Button</button>");
-//         $(".tictactoe").append(buttons);
-//     };
-// });
+// multiplayer 
+
+//click on grid to allow player to select "X" or "O"
+
+//print selection to div  

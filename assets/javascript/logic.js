@@ -6,7 +6,6 @@ $( document ).ready(function() {
 
 
 function xOSelector () {
-    var selectXO = "";
     if (selectXO = true) {
         $(".gamepiece").text("X");
     } else {
@@ -17,8 +16,15 @@ function xOSelector () {
 //click on grid to allow player to select "X" or "O"
 
 $(".gamepiece").click(function() {
+    var clicks = $(this).data('clicks');
+  if (clicks) {
     selectXO = true; 
     xOSelector ();
+  } else {
+    selectXO = false; 
+    xOSelector ();
+  }
+  $(this).data("clicks", !clicks);
 });
 
 
@@ -33,7 +39,7 @@ $(".gamepiece").click(function() {
 
 
 
-
+ 
 
 
 

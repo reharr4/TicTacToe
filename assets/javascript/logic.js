@@ -1,10 +1,15 @@
 $( document ).ready(function() {
 
-// multiplayer ;
+// multiplayer 
 
-var result = $("#x1").html();
 
-console.log(result);
+// score board 
+
+var playerXScore = 0;
+var playerYScore = 0;
+var x = 400;
+$("#x-score").text(`"X's Score: ${playerXScore}"`);
+$("#y-score").text(`"Y's Score: ${playerYScore}"`);
 
   function victoryClasses() {
     //horizontal win conditions
@@ -22,16 +27,31 @@ console.log(result);
 
 victoryClasses();
 
+//reset function 
+
+function gameReset () {
+  $(".gamepiece").text("+");
+}
+
 
 // victory conditions 
 
-
 // timer to check for victory 
   // setInterval(function () {
-  //   if ($(".top-hz:contains('X')") && $(".mid-hz:contains('X')") && $(".bot-hz:contains('X')")) {
+  //   if ($(".top-hz").text("X") || $(".mid-hz").text("X") || $(".bot-hz").text("X")) {
   //     alert("X wins!");
-  //   };
-  // }, 500);
+  //     playerXScore++;
+  //     $("#x-score").text(`"X's Score: ${playerXScore}"`);
+  //     gameReset();
+
+  //   } else if ($(".top-hz").text("Y") || $(".mid-hz").text("Y") || $(".bot-hz").text("Y")) {
+  //     alert("Y wins!");
+  //     playerYScore++;
+  //     $("#y-score").text(`"Y's Score: ${playerYScore}"`);
+  //     gameReset();
+  //   }
+  // }, 1000);
+
 
 
 //click on grid to allow player to select "X" or "O"

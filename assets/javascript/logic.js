@@ -1,12 +1,38 @@
 $( document ).ready(function() {
 
-// multiplayer 
+// multiplayer ;
 
-//victory conditions 
+var result = $("#x1").html();
 
-// if ($("#x1, #x2, #x3 > div.field-item:contains('X')")) {
-//   alert("X wins!");
-// };
+console.log(result);
+
+  function victoryClasses() {
+    //horizontal win conditions
+    $("#x1, #x1, #x3").addClass("top-hz");
+    $("#y1, #y2, #y3").addClass("mid-hz");
+    $("#z1, #z2, #z3").addClass("bot-hz");
+    //vertical win conditions
+    $("#x1, #y1, #z1").addClass("left-vr");
+    $("#x2, #y2, #z2").addClass("mid-vr");
+    $("#x3, #y3, #z3").addClass("left-vr");
+    //diagonal win conditions
+    $("#x1, #y2, #z3").addClass("bc-dia");
+    $("#x3, #y2, #z1").addClass("fw-dia");
+  };
+
+victoryClasses();
+
+
+// victory conditions 
+
+
+// timer to check for victory 
+  // setInterval(function () {
+  //   if ($(".top-hz:contains('X')") && $(".mid-hz:contains('X')") && $(".bot-hz:contains('X')")) {
+  //     alert("X wins!");
+  //   };
+  // }, 500);
+
 
 //click on grid to allow player to select "X" or "O"
 

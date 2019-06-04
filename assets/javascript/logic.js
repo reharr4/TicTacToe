@@ -2,10 +2,11 @@ $( document ).ready(function() {
 
 // multiplayer 
 
+//victory conditions 
 
-
-// variable to establish state of gamepiece
-
+// if ($("#x1, #x2, #x3 > div.field-item:contains('X')")) {
+//   alert("X wins!");
+// };
 
 //click on grid to allow player to select "X" or "O"
 

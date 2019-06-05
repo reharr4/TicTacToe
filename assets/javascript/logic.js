@@ -2,15 +2,21 @@ $( document ).ready(function() {
 
 // multiplayer 
 
+arrayPosition = 0;
 
 // score board 
 
 var playerXScore = 0;
-var playerYScore = 0;
-var x = 400;
-$("#x-score").text(`"X's Score: ${playerXScore}"`);
-$("#y-score").text(`"Y's Score: ${playerYScore}"`);
+var playerOScore = 0;
 
+$("#x-score").text(`"X's Score: ${playerXScore}"`);
+$("#y-score").text(`"Y's Score: ${playerOScore}"`);
+
+//initial state of game board
+$(".gamepiece").text("_");
+
+
+//function to apply victory conditions to id's
   function victoryClasses() {
     //horizontal win conditions
     $("#x1, #x1, #x3").addClass("top-hz");
@@ -30,163 +36,42 @@ victoryClasses();
 //reset function 
 
 function gameReset () {
-  $(".gamepiece").text("+");
+  $(".gamepiece").text("_");
 }
 
+// && $(".mid-hz").text("X") && $(".bot-hz").text("X"))
 
+console.log($(".top-hz").text());
 // victory conditions 
 
 // timer to check for victory 
-  // setInterval(function () {
-  //   if ($(".top-hz").text("X") || $(".mid-hz").text("X") || $(".bot-hz").text("X")) {
-  //     alert("X wins!");
-  //     playerXScore++;
-  //     $("#x-score").text(`"X's Score: ${playerXScore}"`);
-  //     gameReset();
+  setInterval(function () {
+    if ($(".top-hz").text() == "X" && $(".mid-hz").text() == "X" && $(".bot-hz").text() == "X")  {
+      alert("X wins!");
+      playerXScore++;
+      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      gameReset();
 
-  //   } else if ($(".top-hz").text("Y") || $(".mid-hz").text("Y") || $(".bot-hz").text("Y")) {
-  //     alert("Y wins!");
-  //     playerYScore++;
-  //     $("#y-score").text(`"Y's Score: ${playerYScore}"`);
-  //     gameReset();
-  //   }
-  // }, 1000);
+    } else if ($(".top-hz").text() == "O" && $(".mid-hz").text() == "O" && $(".bot-hz").text() == "O") {
+      alert("Y wins!");
+      playerOScore++;
+      $("#y-score").text(`"Y's Score: ${playerYScore}"`);
+      gameReset();
+    };
+  }, 1000);
 
 
 
 //click on grid to allow player to select "X" or "O"
 
-  $("#x1").click( function () {
-    var xOselector = Math.floor(Math.random() * 2); 
-    
-    
-    if (xOselector === 0) {
-    $("#x1").text("X");
-    xOselector = 1;
-    } else {
-      $("#x1").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#x2").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#x2").text("X");
-    xOselector = 1;
-    } else {
-      $("#x2").text("O");
-      xOselector = 0;
-    }
-  });
-  
-  $("#x3").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#x3").text("X");
-    xOselector = 1;
-    } else {
-      $("#x3").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#y1").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#y1").text("X");
-    xOselector = 1;
-    } else {
-      $("#y1").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#y2").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#y2").text("X");
-    xOselector = 1;
-    } else {
-      $("#y2").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#y3").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#y3").text("X");
-    xOselector = 1;
-    } else {
-      $("#y3").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#z1").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#z1").text("X");
-    xOselector = 1;
-    } else {
-      $("#z1").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#z2").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#z2").text("X");
-    xOselector = 1;
-    } else {
-      $("#z2").text("O");
-      xOselector = 0;
-    }
-  });
-
-  $("#z3").click( function () {
-    var xOselector = Math.floor(Math.random() * 2);
-    
-    
-    if (xOselector === 0) {
-    $("#z3").text("X");
-    xOselector = 1;
-    } else {
-      $("#z3").text("O");
-      xOselector = 0;
-    }
-  });
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
+$(".gamepiece").click(function() {
+  var gamepieceArray = ["X", "O", "_"];
+  if (arrayPosition === 3) {
+    arrayPosition = 0;
+  };
+  $(this).html(gamepieceArray[arrayPosition]);
+  arrayPosition++; 
+});
 
 
 });

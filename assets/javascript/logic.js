@@ -1,8 +1,7 @@
 $( document ).ready(function() {
-
 // multiplayer 
 
-arrayPosition = 0;
+var arrayPosition = 0;
 
 // score board 
 
@@ -14,6 +13,7 @@ $("#o-score").text(`O's Score: ${playerOScore}`);
 
 //initial state of game board
 $(".gamepiece").text("_");
+
 
 
 //function to apply victory conditions to id's
@@ -37,16 +37,18 @@ victoryClasses();
 
 function gameReset () {
   $(".gamepiece").html("_");
+  $(".gamepiece").css("color", "black");
 };
 
+// victory configuration color function
 
-  // victory conditions 
+
 
   // timer to check for victory 
   setInterval(function () {
   //X victory conditions 
     //top horizontal win
-    if ($("#x1").html() == "X" && $("#x2").html() == "X" && $("#x1").html() == "X")  {
+    if ($("#x1").html() == "X" && $("#x2").html() == "X" && $("#x3").html() == "X")  {
       alert("X wins!");
       playerXScore++;
       $("#x-score").text(`X's Score: ${playerXScore}`);
@@ -144,12 +146,12 @@ function gameReset () {
         $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
       //   // cat
-      // } else if ($("#x1").html() == "O" || "X" && $("#x2").html() == "O" || "X" && $("#x3").html() == "O" || "X"
-      //   && $("#y1").html() == "O" || "X" && $("#y2").html() == "O" || "X" && $("#y3").html() == "O" || "X"
-      //   && $("#z1").html() == "O" || "X" && $("#z2").html() == "O" || "X" && $("#z3").html() == "O" || "X") {
+      } 
+      // else if ($("#x1").html() == "O" || $("#x1").html() == "X" && $("#x2").html() == "O" || $("#x2").html() == "X" && $("#x3").html() == "O" || $("#x3").html() == "X"
+      //   && $("#y1").html() == "O" || $("#y1").html() == "X" && $("#y2").html() == "O" || $("#y2").html() == "X" && $("#y3").html() == "O" || $("#y3").html() == "X"
+      //   && $("#z1").html() == "O" || $("#z1").html() == "X" && $("#z2").html() == "O" || $("#z2").html() == "X" && $("#z3").html() == "O" || $("#z3").html() == "X")
       //   alert("Cat Game!");
       //   gameReset();
-      };
     }, 1000);
 
 //click on grid to allow player to select "X" or "O"
@@ -161,17 +163,7 @@ $(".gamepiece").click(function() {
   };
   $(this).html(gamepieceArray[arrayPosition]);
   arrayPosition++; 
-  console.log($("#x1").html());
-  console.log($("#x2").html());
-  console.log($("#x3").html());
-  console.log($("#y1").html());
-  console.log($("#y2").html());
-  console.log($("#y3").html());
-  console.log($("#z1").html());
-  console.log($("#z2").html());
-  console.log($("#z3").html());
 });
-
 
 
 

@@ -45,3 +45,9 @@
 body {
     font-family: 'Space Mono', monospace;
 }
+
+.winner-banner {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+}

@@ -9,8 +9,8 @@ arrayPosition = 0;
 var playerXScore = 0;
 var playerOScore = 0;
 
-$("#x-score").text(`"X's Score: ${playerXScore}"`);
-$("#o-score").text(`"O's Score: ${playerOScore}"`);
+$("#x-score").text(`X's Score: ${playerXScore}`);
+$("#o-score").text(`O's Score: ${playerOScore}`);
 
 //initial state of game board
 $(".gamepiece").text("_");
@@ -49,49 +49,49 @@ function gameReset () {
     if ($("#x1").html() == "X" && $("#x2").html() == "X" && $("#x1").html() == "X")  {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //mid horizontal win
     } else if ($("#y1").html() == "X" && $("#y2").html() == "X" && $("#y3").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //bottom horizontal win
     } else if ($("#z1").html() == "X" && $("#z2").html() == "X" && $("#z3").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //left vertical win
     } else if ($("#x1").html() == "X" && $("#y1").html() == "X" && $("#z1").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //mid vertical win
     } else if ($("#x2").html() == "X" && $("#y2").html() == "X" && $("#z2").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //right vertical win
     } else if ($("#x3").html() == "X" && $("#y3").html() == "X" && $("#z3").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //backslash diagonal win
     } else if ($("#x1").html() == "X" && $("#y2").html() == "X" && $("#z3").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
       //forwardslash diagonal win
     } else if ($("#x3").html() == "X" && $("#y2").html() == "X" && $("#z1").html() == "X") {
       alert("X wins!");
       playerXScore++;
-      $("#x-score").text(`"X's Score: ${playerXScore}"`);
+      $("#x-score").text(`X's Score: ${playerXScore}`);
       gameReset();
     }
   //Y victory conditions 
@@ -99,53 +99,59 @@ function gameReset () {
       else if ($("#x1").html() == "O" && $("#x2").html() == "O" && $("#x3").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //mid horizontal win
       } else if ($("#y1").html() == "O" && $("#y2").html() == "O" && $("#y3").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //bottom horizontal win
       } else if ($("#z1").html() == "O" && $("#z2").html() == "O" && $("#z3").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //left vertical win
       } else if ($("#x1").html() == "O" && $("#y1").html() == "O" && $("#z1").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //mid vertical win
       } else if ($("#x2").html() == "O" && $("#y2").html() == "O" && $("#z2").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //right vertical win
       } else if ($("#x3").html() == "O" && $("#y3").html() == "O" && $("#z3").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //backslash diagonal win
       } else if ($("#x1").html() == "O" && $("#y2").html() == "O" && $("#z3").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
         //forwardslash diagonal win
       } else if ($("#x3").html() == "O" && $("#y2").html() == "O" && $("#z1").html() == "O") {
         alert("O wins!");
         playerOScore++;
-        $("#o-score").text(`"O's Score: ${playerOScore}"`);
+        $("#o-score").text(`O's Score: ${playerOScore}`);
         gameReset();
+      //   // cat
+      // } else if ($("#x1").html() == "O" || "X" && $("#x2").html() == "O" || "X" && $("#x3").html() == "O" || "X"
+      //   && $("#y1").html() == "O" || "X" && $("#y2").html() == "O" || "X" && $("#y3").html() == "O" || "X"
+      //   && $("#z1").html() == "O" || "X" && $("#z2").html() == "O" || "X" && $("#z3").html() == "O" || "X") {
+      //   alert("Cat Game!");
+      //   gameReset();
       };
     }, 1000);
-    
+
 //click on grid to allow player to select "X" or "O"
 
 $(".gamepiece").click(function() {
